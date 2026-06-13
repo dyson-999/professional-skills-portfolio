@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilshan Udara | Professional Skills Portfolio (IT1215)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Canvas for Astronomy Background -->
+    <canvas id="starfield"></canvas>
+
+    <!-- App Container -->
+    <div class="app-container">
+        
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+            <i id="theme-toggle-icon" data-lucide="sun"></i>
+        </button>
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-avatar-container">
+                    <div class="profile-avatar">
+                        <img src="assets/profile.jpg" alt="Dilshan Udara" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 1;">
+                        <div class="orbit-ring ring-1"></div>
+                        <div class="orbit-ring ring-2"></div>
+                    </div>
+                </div>
+                <h2>Dilshan Udara</h2>
+                <p class="subtitle">IT Undergraduate</p>
+                <div class="badge">PS Module Portfolio</div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-link active" data-target="home">
+                    <i data-lucide="home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#profile" class="nav-link" data-target="profile">
+                    <i data-lucide="user"></i>
+                    <span>Profile & CV</span>
+                </a>
+                <a href="#reflections" class="nav-link" data-target="reflections">
+                    <i data-lucide="book-open"></i>
+                    <span>Lecture Reflections</span>
+                </a>
+                <a href="#project" class="nav-link" data-target="project">
+                    <i data-lucide="users"></i>
+                    <span>Group Project</span>
+                </a>
+                <a href="#workbench" class="nav-link" data-target="workbench">
+                    <i data-lucide="cpu"></i>
+                    <span>Interactive Tools</span>
+                </a>
+                <a href="#contact" class="nav-link" data-target="contact">
+                    <i data-lucide="mail"></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="https://github.com/dyson-999" target="_blank" title="GitHub"><i data-lucide="github"></i></a>
+                <a href="https://linkedin.com/in/dilshan-udara" target="_blank" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="mailto:dilshanudara512@gmail.com" title="Email"><i data-lucide="mail"></i></a>
+            </div>
+        </aside>
+
+        <!-- Toggle Sidebar Button (Mobile) -->
+        <button class="mobile-toggle" id="mobile-toggle">
+            <i data-lucide="menu"></i>
+        </button>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- HOME SECTION -->
+            <section id="home" class="content-section active">
+                <div class="hero">
+                    <div class="hero-content">
+                        <span class="hero-label">WELCOME TO MY PORTFOLIO</span>
+                        <h1 class="glow-text">Dilshan Udara</h1>
+                        <p class="hero-tagline">IT Undergraduate at SLIIT City Uni & IT Support Specialist</p>
+                        <p class="hero-desc">
+                            This learning portfolio documents my growth, learning outcomes, and reflections throughout the 
+                            <strong>Professional Skills (IT1215)</strong> module. It blends my technical foundation in software and 
+                            troubleshooting with critical interpersonal competencies, framed around my deep interest in astronomy.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#reflections" class="btn btn-primary" onclick="switchSection('reflections')">Explore Lectures</a>
+                            <a href="#workbench" class="btn btn-secondary" onclick="switchSection('workbench')">Try Interactive Tools</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="planet-container">
+                            <div class="planet-core"></div>
+                            <div class="planet-glow"></div>
+                            <div class="moon"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Module Overview -->
+                <div class="module-overview">
+                    <div class="section-title-wrap">
+                        <h2 class="section-title">Module Overview (IT1215)</h2>
+                        <p class="section-subtitle">Understanding the foundation of Professional Skills</p>
+                    </div>
+                    <div class="grid grid-3">
+                        <div class="info-card glass">
+                            <div class="card-icon"><i data-lucide="award"></i></div>
+                            <h3>Credits & Level</h3>
+                            <p>Level 2, Semester 2 module at SLIIT Academy. Earns 2 Credit Points, delivering essential workforce readiness skills.</p>
+                        </div>
+                        <div class="info-card glass">
+                            <div class="card-icon"><i data-lucide="target"></i></div>
+                            <h3>Aim & Core Focus</h3>
+                            <p>Facilitates a deep understanding of professional, communicative, and employability skills necessary for real-world IT careers.</p>
+                        </div>
+                        <div class="info-card glass">
+                            <div class="card-icon"><i data-lucide="navigation"></i></div>
+                            <h3>Learning Outcomes</h3>
+                            <p>Spans 10 key outcomes including CV formulation, interview techniques, negotiation, leadership, ethics, and emotional intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROFILE & CV SECTION -->
+            <section id="profile" class="content-section">
+                <div class="section-title-wrap">
+                    <span class="section-tag">WHO I AM</span>
+                    <h2 class="section-title">Professional Profile & CV</h2>
+                    <p class="section-subtitle">Combining IT support experience with software development skills</p>
+                </div>
+
+                <div class="profile-layout">
+                    <!-- Left: Bio & Details -->
+                    <div class="profile-details glass">
+                        <h3>About Me</h3>
+                        <p>
+                            I am a second-year Information Technology undergraduate student at SLIIT City Uni. 
+                            Through my work experience as an IT Support Assistant at Arpico SuperCenter, I've developed 
+                            practical expertise in hardware troubleshooting, software configuration, system administration, and first-line support.
+                        </p>
+                        <p>
+                            My approach to IT combines logical problem solving with continuous learning. My interest in astronomy 
+                            and astrophysics reflects my analytical, inquisitive, and self-directed learning mindset.
+                        </p>
+
+                        <div class="personal-info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Full Name</span>
+                                <span class="info-value">T.M.D.U.N. Thennakoon</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Birthday</span>
+                                <span class="info-value">05th December 2002</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Nationality</span>
+                                <span class="info-value">Sri Lankan</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Address</span>
+                                <span class="info-value">Tea Estate, Koongamuwa, Mawanella</span>
+                            </div>
+                        </div>
+
+                        <div class="interests-tags">
+                            <h4>Interests & Hobbies</h4>
+                            <div class="tags-container">
+                                <span class="tag"><i data-lucide="orbit"></i> Astronomy & Astrophysics</span>
+                                <span class="tag"><i data-lucide="gamepad-2"></i> Gaming</span>
+                                <span class="tag"><i data-lucide="code-2"></i> Open Source</span>
+                                <span class="tag"><i data-lucide="book-open"></i> Space Engine Simulation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Skills Hex/Card Grid -->
+                    <div class="skills-card glass">
+                        <h3>Core Skills</h3>
+                        
+                        <div class="skills-category">
+                            <h4>Technical & Web Development</h4>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-info"><span>HTML, CSS & JavaScript</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-info"><span>Python</span><span>75%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                            </div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-info"><span>PHP & SQL / MySQL</span><span>70%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+                            </div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-info"><span>Git & GitHub Basics</span><span>80%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h4>IT Support & Operations</h4>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-info"><span>Hardware/Software Troubleshooting</span><span>90%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-info"><span>OS Support (Windows & Linux)</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-bar-wrap">
+                                <div class="skill-info"><span>Basic Networking (LAN, Wi-Fi)</span><span>75%</span></div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience & Education Timeline -->
+                <div class="experience-education-grid grid grid-2">
+                    <!-- Work Experience -->
+                    <div class="timeline-section glass">
+                        <h3><i data-lucide="briefcase"></i> Work Experience</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2024</div>
+                                <h4>IT Support Assistant</h4>
+                                <h5>Arpico SuperCenter, Katugasthota</h5>
+                                <p>Provided first-line IT support for office staff and store systems. Assisted in setting up new workstations, installing OS, maintaining software, and troubleshooting basic network connectivity.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="timeline-section glass">
+                        <h3><i data-lucide="graduation-cap"></i> Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2024 - Present</div>
+                                <h4>Higher Diploma in Information Technology</h4>
+                                <h5>SLIIT City Uni</h5>
+                                <p>Currently in 2nd year. Gaining depth in software development, networks, databases, and professional skills.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">Completed</div>
+                                <h4>Diploma in Information Technology</h4>
+                                <h5>Esoft Metro Campus, Kandy</h5>
+                                <p>Laid the groundwork for core IT infrastructure, programming logic, and systems support.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2021</div>
+                                <h4>G.C.E. Advanced Level</h4>
+                                <h5>St. Mary’s College, Kegalle</h5>
+                                <p>English Medium education with physics and mathematics foundations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Showcase -->
+                <div class="projects-section">
+                    <div class="section-title-wrap text-center">
+                        <h3>Featured Individual Projects</h3>
+                    </div>
+                    <div class="grid grid-2">
+                        <div class="project-card glass">
+                            <div class="project-header">
+                                <i data-lucide="shopping-cart" class="project-icon"></i>
+                                <h4>GGDy – Dy Gaming Store</h4>
+                            </div>
+                            <p>A modern, responsive e-commerce web platform for gaming products. Integrates catalog browsing, custom cart logic, database storage, and a user login system.</p>
+                            <div class="tech-stack">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+                            </div>
+                            <a href="https://github.com/dyson-999/GG_Dy_Web" target="_blank" class="project-link">View Repo <i data-lucide="external-link"></i></a>
+                        </div>
+                        <div class="project-card glass">
+                            <div class="project-header">
+                                <i data-lucide="message-square" class="project-icon"></i>
+                                <h4>Proxima Squad Stats Bot</h4>
+                            </div>
+                            <p>A specialized Discord bot for gaming servers. Tracks active user gaming sessions, voice channel durations, manual focus hours, and provides statistics dashboards.</p>
+                            <div class="tech-stack">
+                                <span>Python</span><span>discord.py 2.x</span><span>SQLite</span>
+                            </div>
+                            <a href="https://github.com/dyson-999/Prox-Stats" target="_blank" class="project-link">View Repo <i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LECTURE REFLECTIONS SECTION -->
+            <section id="reflections" class="content-section">
+                <div class="section-title-wrap">
+                    <span class="section-tag">ACADEMIC JOURNEY</span>
+                    <h2 class="section-title">Lecture Reflections</h2>
+                    <p class="section-subtitle">Click on any lecture card to view core materials, worksheets, and my personal learning reflections</p>
+                </div>
+
+                <!-- Lecture Cards Grid -->
+                <div class="grid grid-3" id="lectures-grid">
+                    <!-- Cards will be populated dynamically by app.js -->
+                </div>
+            </section>
+
+            <!-- GROUP PROJECT SECTION -->
+            <section id="project" class="content-section">
+                <div class="section-title-wrap">
+                    <span class="section-tag">COMMUNITY OUTREACH</span>
+                    <h2 class="section-title">Group Project: "Tech-Fusion 2026"</h2>
+                    <p class="section-subtitle">Bridging the technology access gap at WP/NG Dharmashoka Maha Vidyalaya</p>
+                </div>
+
+                <!-- Group Photo Prominent Banner -->
+                <div class="glass" style="margin-bottom: 2.5rem; padding: 1rem; display: flex; flex-direction: column; align-items: center; border-color: rgba(168, 85, 247, 0.3); box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);">
+                    <img src="assets/group-project/img_p13_2.png" id="group-photo-banner-img" alt="Group 13 Team Photo at WP/NG Dharmashoka Maha Vidyalaya" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 12px; cursor: pointer; border: 1px solid var(--card-border); transition: transform 0.3s ease;">
+                    <p style="margin-top: 1rem; color: var(--accent-cyan); font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="users"></i>
+                        Group 13 Team Photo at WP/NG Dharmashoka Maha Vidyalaya
+                    </p>
+                </div>
+
+                <!-- Project Overview Grid -->
+                <div class="grid grid-4" style="margin-bottom: 2.5rem;">
+                    <div class="info-card glass">
+                        <div class="card-icon"><i data-lucide="map-pin"></i></div>
+                        <h3>Venue</h3>
+                        <p>WP/NG Dharmashoka Maha Vidyalaya</p>
+                    </div>
+                    <div class="info-card glass">
+                        <div class="card-icon"><i data-lucide="calendar"></i></div>
+                        <h3>Date</h3>
+                        <p>April 7th, 2026</p>
+                    </div>
+                    <div class="info-card glass">
+                        <div class="card-icon"><i data-lucide="user-check"></i></div>
+                        <h3>Dilshan's Role</h3>
+                        <p>Teaching Assistant, Setup, & Media Coordinator</p>
+                    </div>
+                    <div class="info-card glass">
+                        <div class="card-icon"><i data-lucide="users"></i></div>
+                        <h3>Team Size</h3>
+                        <p>Group 13 (12 Members)</p>
+                    </div>
+                </div>
+
+                <!-- Project Context -->
+                <div class="profile-layout" style="margin-bottom: 2.5rem;">
+                    <div class="profile-details glass">
+                        <h3>The Mission & Context</h3>
+                        <p>
+                            Dharmashoka Maha Vidyalaya had a severe technology access gap: their IT laboratory contained only a single functioning desktop computer, approximately 15 years old. The vast majority of the 25 student participants had no computer access at home.
+                        </p>
+                        <p>
+                            To solve this, Group 13 implemented a <strong>Self-Sustained Mobile Tech Lab</strong> model. Every member brought their personal laptops to setup a temporary 12-workstation classroom. The team leader acted as the main lecturer, while the other 11 members (including myself) worked one-on-one with students as TAs to write code.
+                        </p>
+                        <p>
+                            We taught basic programming structures (HTML5 tag styling, CSS3 layout design, and logical cipher setups). To ensure continuous learning, we provided color-printed handbooks for offline reference and curated QR codes for coding videos.
+                        </p>
+                    </div>
+                    <div class="skills-card glass">
+                        <h3>Dilshan's Reflections</h3>
+                        <p>
+                            "As an IT support assistant, setting up a 12-device technical lab in a classroom with no network or infrastructure was a great test of my technical readiness. I routed power, configured offline coding directories, and verified settings on all devices."
+                        </p>
+                        <p>
+                            " mentoring students who had never touched a PC before was deeply moving. It challenged me to drop technical terms and explain how tag nests work using simple analogies. I also acted as the media coordinator, taking photos and videos to document our progress."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Budget & Expenditure Section -->
+                <div class="glass" style="margin-bottom: 2.5rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-cyan);">Financial Management & Budget Allocation</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        To fund this community service project, each of the 12 members contributed LKR 1,500. Through sponsorships from Leo Club and SLIIT Marketing, the team saved costs on printing and transport. These savings were reallocated to buy LKR 11,955 worth of essential office and stationery supplies (A4 paper packs, pens, white-board markers, whiteboard markers, staplers) for the school office.
+                    </p>
+
+                    <div class="grid grid-2">
+                        <div>
+                            <h4 style="margin-bottom: 0.75rem; color: var(--text-secondary);">Initial Proposal Budget Plan</h4>
+                            <table class="project-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Description</th>
+                                        <th>Cost (LKR)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Printing & Stationery</td>
+                                        <td>Master Tutes, Forms, Cipher Wheels</td>
+                                        <td>5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Transport</td>
+                                        <td>Round-trip PickMe/Uber travel for team</td>
+                                        <td>3,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mobile Data</td>
+                                        <td>Workstation backup files download</td>
+                                        <td>1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Donation Item</td>
+                                        <td>School office supplies donation</td>
+                                        <td>7,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student Treats</td>
+                                        <td>Chocolates/snacks for quiz prizes</td>
+                                        <td>1,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contingency</td>
+                                        <td>10% emergency buffer</td>
+                                        <td>1,800</td>
+                                    </tr>
+                                    <tr class="table-total">
+                                        <td colspan="2">TOTAL BUDGET</td>
+                                        <td>19,800</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.75rem; color: var(--text-secondary);">Actual Expenditures Report</h4>
+                            <table class="project-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Details</th>
+                                        <th>Spent (LKR)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Education Materials</td>
+                                        <td>25 Student Handbooks (Color pages)</td>
+                                        <td>3,250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Donation Items</td>
+                                        <td>A4 paper packs, pens, whiteboard markers, etc.</td>
+                                        <td>11,955</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student Treats</td>
+                                        <td>Gifts for quiz winners, chocolates</td>
+                                        <td>1,850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decoration Materials</td>
+                                        <td>Bristol boards, glitter sheets, logos</td>
+                                        <td>1,500</td>
+                                    </tr>
+                                    <tr class="table-total">
+                                        <td colspan="2">TOTAL SPENT</td>
+                                        <td>18,555</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsibility Matrix -->
+                <div class="glass" style="margin-bottom: 2.5rem;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-purple);">Team Responsibility Matrix (Group 13)</h3>
+                    <table class="project-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Reg. No</th>
+                                <th>Core Responsibilities</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>M.I.R. Munasinghe</td>
+                                <td>SA24610110</td>
+                                <td>Team Leader, Resource Allocation, Main Host of the event</td>
+                            </tr>
+                            <tr class="highlighted-row">
+                                <td>T.M.D.U.N Thennakoon</td>
+                                <td>SA24610394</td>
+                                <td>Workstation Setup, Teaching Assistant (T.A.), Media Coordinator</td>
+                            </tr>
+                            <tr>
+                                <td>R.G.S. Nadeesha</td>
+                                <td>SA24610728</td>
+                                <td>Teaching Assistant, Decorations, Stationery assembly</td>
+                            </tr>
+                            <tr>
+                                <td>T.H. Nandula Hansa Dinu</td>
+                                <td>IT21704598</td>
+                                <td>Workstation setup, resource coordination, T.A.</td>
+                            </tr>
+                            <tr>
+                                <td>D.M.O.T. Caldera</td>
+                                <td>SA24610745</td>
+                                <td>Teaching Assistant, Decorations, Logistics</td>
+                            </tr>
+                            <tr>
+                                <td>A.M.A.P. Atapattu</td>
+                                <td>SA24101589</td>
+                                <td>Teaching Assistant, Decorations, Logistics</td>
+                            </tr>
+                            <tr>
+                                <td>W.M.D. Oshadha</td>
+                                <td>SA24610523</td>
+                                <td>Workstation setup, teaching assistant, decorations</td>
+                            </tr>
+                            <tr>
+                                <td>U.D.P.S. Chanuka</td>
+                                <td>SA24610516</td>
+                                <td>Workstation setup, teaching assistant, decorations</td>
+                            </tr>
+                            <tr>
+                                <td>P.H.G.M.T. Bandara</td>
+                                <td>SA24610447</td>
+                                <td>Workstation setup, teaching assistant, decorations</td>
+                            </tr>
+                            <tr>
+                                <td>R.N.T. Jaywardhana</td>
+                                <td>SA24610665</td>
+                                <td>Lesson coordinator, purchase coordinator, T.A.</td>
+                            </tr>
+                            <tr>
+                                <td>S.G. Kavishka</td>
+                                <td>SA24610422</td>
+                                <td>Workstation setup, teaching assistant, decorations</td>
+                            </tr>
+                            <tr>
+                                <td>L.A.T. Anujitha</td>
+                                <td>SA24610384</td>
+                                <td>Workstation setup, teaching assistant, decorations</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Full Completion Report Viewer -->
+                <div class="glass" style="margin-bottom: 2.5rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-cyan);">Full Project Completion Report</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Flip through the 14-page formal project completion report. Click on the page image to enlarge and view it in high resolution.
+                    </p>
+
+                    <div class="report-viewer-container">
+                        <button class="viewer-btn prev" id="report-prev-btn" onclick="if(window.reportPrevPage) window.reportPrevPage();"><i data-lucide="chevron-left"></i></button>
+                        <div class="report-page-wrapper">
+                            <img src="assets/group-project-report/COMMUNITY PROJECT COMPLETION REPORT- Group 13-01.png" id="report-page-img" alt="Report Page" style="width: 100%; max-height: 75vh; object-fit: contain; border-radius: 8px; border: 1px solid var(--card-border); cursor: zoom-in;" onclick="if(window.zoomReportPage) window.zoomReportPage();">
+                        </div>
+                        <button class="viewer-btn next" id="report-next-btn" onclick="if(window.reportNextPage) window.reportNextPage();"><i data-lucide="chevron-right"></i></button>
+                    </div>
+                    <div class="report-viewer-footer" style="text-align: center; margin-top: 1rem; font-family: var(--font-heading); font-weight: 600; color: var(--text-secondary);">
+                        <span id="report-page-indicator">Page 1 of 14</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Section -->
+                <div class="glass">
+                    <h3 style="margin-bottom: 2rem; color: var(--accent-cyan);">Project Gallery</h3>
+                    <div class="gallery-grid" id="project-gallery">
+                        <div class="gallery-item" data-index="0">
+                            <img src="assets/group-project/img_p0_1.png" alt="Tech-Fusion 2026: Workshop Logo">
+                            <div class="gallery-overlay"><span>Workshop Logo</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="1">
+                            <img src="assets/group-project/img_p4_1.png" alt="Initial Project Proposal & Resource Planning">
+                            <div class="gallery-overlay"><span>Initial Proposal Plan</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="2">
+                            <img src="assets/group-project/img_p10_1.png" alt="Academic Reflection & Framework Design">
+                            <div class="gallery-overlay"><span>Academic Reflections</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="3">
+                            <img src="assets/group-project/img_p11_1.png" alt="Dharmashoka Maha Vidyalaya IT Lab Classroom">
+                            <div class="gallery-overlay"><span>IT Lab Classroom</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="4">
+                            <img src="assets/group-project/img_p11_2.png" alt="Setting Up 12-Device Mobile Technical Lab Workstations">
+                            <div class="gallery-overlay"><span>Mobile Lab Setup</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="5">
+                            <img src="assets/group-project/img_p11_3.png" alt="Students Assembling and Coding HTML5 Structures">
+                            <div class="gallery-overlay"><span>Hands-on coding</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="6">
+                            <img src="assets/group-project/img_p11_4.png" alt="Group 13 Assistants Assisting Students One-on-One">
+                            <div class="gallery-overlay"><span>One-on-One Mentorship</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="7">
+                            <img src="assets/group-project/img_p11_5.png" alt="Hands-on Exercises: Writing CSS Styles">
+                            <div class="gallery-overlay"><span>CSS Code Styling</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="8">
+                            <img src="assets/group-project/img_p12_1.png" alt="Financial Reallocations: Purchased Donation Supplies">
+                            <div class="gallery-overlay"><span>Donation Supplies</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="9">
+                            <img src="assets/group-project/img_p12_2.png" alt="Donations Handover: Handing over Stationery to Ms. Chathuri (IT Teacher)">
+                            <div class="gallery-overlay"><span>Donations Handover</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="10">
+                            <img src="assets/group-project/img_p12_3.png" alt="Supplies Handover at WP/NG Dharmashoka Maha Vidyalaya Office">
+                            <div class="gallery-overlay"><span>Office Handover</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="11">
+                            <img src="assets/group-project/img_p12_4.png" alt="IT Teacher Ms. Chathuri Coordinating Classroom Setup">
+                            <div class="gallery-overlay"><span>IT Teacher Coordination</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="12">
+                            <img src="assets/group-project/img_p13_1.png" alt="Leo Club Sponsor Materials & Certificate Distribution">
+                            <div class="gallery-overlay"><span>Sponsorship & Certs</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="13">
+                            <img src="assets/group-project/img_p13_2.png" alt="Group 13 Team Photo at WP/NG Dharmashoka Maha Vidyalaya">
+                            <div class="gallery-overlay"><span>Group 13 Photo</span></div>
+                        </div>
+                        <div class="gallery-item" data-index="14">
+                            <img src="assets/group-project/img_p13_3.png" alt="Closing Ceremony: Group Photo with Participants">
+                            <div class="gallery-overlay"><span>Closing Ceremony Group</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTERACTIVE WORKBENCH SECTION -->
+            <section id="workbench" class="content-section">
+                <div class="section-title-wrap">
+                    <span class="section-tag">WIDGETS & TOOLS</span>
+                    <h2 class="section-title">Interactive Workbench</h2>
+                    <p class="section-subtitle">Test your professional competencies with these interactive utilities</p>
+                </div>
+
+                <!-- Sub-navigation Tabs for Workbench -->
+                <div class="workbench-tabs glass">
+                    <button class="workbench-tab active" data-tab="johari">Johari Window</button>
+                    <button class="workbench-tab" data-tab="swot">SWOT Analysis</button>
+                    <button class="workbench-tab" data-tab="interview">Mock Interview</button>
+                    <button class="workbench-tab" data-tab="ethics">Ethics Game</button>
+                    <button class="workbench-tab" data-tab="minutes">Minutes Generator</button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="workbench-content">
+                    
+                    <!-- JOHARI WINDOW -->
+                    <div id="johari-tab" class="tab-pane active">
+                        <div class="pane-header">
+                            <h3><i data-lucide="grid"></i> Interactive Johari Window</h3>
+                            <p>Explore self-awareness by selecting adjectives to plot details in the four quadrants of the Johari Window.</p>
+                            <button id="load-dyson-johari" class="btn btn-secondary btn-sm">Load Dilshan's Profile</button>
+                        </div>
+                        <div class="johari-workspace">
+                            <div class="adjective-selector glass">
+                                <h4>Select 5-8 Adjectives:</h4>
+                                <div class="adjectives-list" id="johari-adjectives">
+                                    <!-- Populated dynamically -->
+                                </div>
+                                <div class="johari-controls">
+                                    <button id="reset-johari" class="btn btn-danger btn-sm">Reset</button>
+                                </div>
+                            </div>
+                            <div class="johari-matrix">
+                                <div class="johari-quadrant" id="johari-open">
+                                    <div class="quadrant-title">OPEN AREA (Arena)</div>
+                                    <div class="quadrant-desc">Known to self & others</div>
+                                    <ul class="quadrant-list"></ul>
+                                </div>
+                                <div class="johari-quadrant" id="johari-blind">
+                                    <div class="quadrant-title">BLIND AREA (Blind Spot)</div>
+                                    <div class="quadrant-desc">Known to others, unknown to self</div>
+                                    <ul class="quadrant-list"></ul>
+                                </div>
+                                <div class="johari-quadrant" id="johari-hidden">
+                                    <div class="quadrant-title">HIDDEN AREA (Façade)</div>
+                                    <div class="quadrant-desc">Known to self, unknown to others</div>
+                                    <ul class="quadrant-list"></ul>
+                                </div>
+                                <div class="johari-quadrant" id="johari-unknown">
+                                    <div class="quadrant-title">UNKNOWN AREA</div>
+                                    <div class="quadrant-desc">Unknown to self & others</div>
+                                    <ul class="quadrant-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SWOT ANALYSIS -->
+                    <div id="swot-tab" class="tab-pane">
+                        <div class="pane-header">
+                            <h3><i data-lucide="trending-up"></i> Personal SWOT Dashboard</h3>
+                            <p>Hover or click on the quadrants below to view Dilshan Udara's SWOT analysis and strategic planning details.</p>
+                        </div>
+                        <div class="swot-grid">
+                            <div class="swot-quadrant swot-s">
+                                <div class="swot-letter">S</div>
+                                <div class="swot-quadrant-title">STRENGTHS</div>
+                                <ul>
+                                    <li>Strong hardware/software diagnostic capabilities.</li>
+                                    <li>Proven IT Support experience at Arpico SuperCenter.</li>
+                                    <li>Deep interest in astronomy, cultivating logical reasoning.</li>
+                                    <li>Self-directed learner (programming and gaming tools).</li>
+                                </ul>
+                            </div>
+                            <div class="swot-quadrant swot-w">
+                                <div class="swot-letter">W</div>
+                                <div class="swot-quadrant-title">WEAKNESSES</div>
+                                <ul>
+                                    <li>Limited experience with enterprise cloud deployments.</li>
+                                    <li>Beginner in professional German language skills.</li>
+                                    <li>Public speaking confidence in massive formal settings.</li>
+                                    <li>Sometimes gets overly absorbed in technical troubleshooting details.</li>
+                                </ul>
+                            </div>
+                            <div class="swot-quadrant swot-o">
+                                <div class="swot-letter">O</div>
+                                <div class="swot-quadrant-title">OPPORTUNITIES</div>
+                                <ul>
+                                    <li>Securing an internship in DevOps or Systems Administration.</li>
+                                    <li>Completing Higher Diploma at SLIIT to transition to BSc.</li>
+                                    <li>Leveraging Python/Discord stats project to gain automation roles.</li>
+                                    <li>Expanding networks through SLIIT IT societies.</li>
+                                </ul>
+                            </div>
+                            <div class="swot-quadrant swot-t">
+                                <div class="swot-letter">T</div>
+                                <div class="swot-quadrant-title">THREATS</div>
+                                <ul>
+                                    <li>Highly competitive market for entry-level IT roles.</li>
+                                    <li>Rapid evolution of AI tools altering entry-level support scopes.</li>
+                                    <li>Balancing academic workload at SLIIT with support roles.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOCK INTERVIEW -->
+                    <div id="interview-tab" class="tab-pane">
+                        <div class="pane-header">
+                            <h3><i data-lucide="messages-square"></i> Interview Skills Simulator</h3>
+                            <p>Practice common interview questions. Select a question, review the strategy, draft your response, and compare it with the professional answer key.</p>
+                        </div>
+                        <div class="interview-layout">
+                            <div class="question-list-panel glass">
+                                <h4>Select a Question:</h4>
+                                <ul id="interview-questions-list">
+                                    <!-- Populated dynamically -->
+                                </ul>
+                            </div>
+                            <div class="question-detail-panel glass" id="interview-active-panel">
+                                <div class="empty-state">
+                                    <i data-lucide="play-circle"></i>
+                                    <p>Select a question from the list to start the simulation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ETHICS GAME -->
+                    <div id="ethics-tab" class="tab-pane">
+                        <div class="pane-header">
+                            <h3><i data-lucide="shield-alert"></i> IT Code of Ethics Scenario Quiz</h3>
+                            <p>Read through actual professional IT situations and make decisions that align with code of ethics guidelines.</p>
+                        </div>
+                        <div class="ethics-workspace glass">
+                            <div id="ethics-quiz-container">
+                                <!-- Populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MINUTES GENERATOR -->
+                    <div id="minutes-tab" class="tab-pane">
+                        <div class="pane-header">
+                            <h3><i data-lucide="file-text"></i> Minutes of Meeting (MoM) Generator</h3>
+                            <p>Generate formal agendas and minutes of meetings according to structural standards taught in Lecture 7.</p>
+                        </div>
+                        <div class="minutes-layout">
+                            <div class="minutes-form glass">
+                                <h4>Meeting Details:</h4>
+                                <div class="form-group">
+                                    <label for="mom-title">Meeting Title</label>
+                                    <input type="text" id="mom-title" value="Project Kickoff: GGDy Gaming Store Upgrade">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mom-date">Date & Time</label>
+                                    <input type="datetime-local" id="mom-date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mom-attendees">Attendees (Comma separated)</label>
+                                    <input type="text" id="mom-attendees" value="Dilshan Udara (Chair), Chamath Fernando (Dev), Sanduni Perera (QA)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mom-agenda">Agenda Topics (One per line)</label>
+                                    <textarea id="mom-agenda" rows="3">1. Database Migration to MySQL Cluster&#10;2. UI Redesign using CSS Glassmorphism&#10;3. Testing & Deployment Timelines</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mom-decisions">Key Decisions & Actions</label>
+                                    <textarea id="mom-decisions" rows="3">1. Dilshan to set up MySQL database container by next Monday.&#10;2. Chamath to finalize UI prototype in 3 days.&#10;3. Sanduni to compile QA test cases.</textarea>
+                                </div>
+                                <button id="generate-mom" class="btn btn-primary btn-block">Generate MoM Document</button>
+                            </div>
+                            <div class="minutes-preview glass">
+                                <h4>MoM Output Document:</h4>
+                                <pre id="mom-output">Your generated document will appear here...</pre>
+                                <button id="copy-mom" class="btn btn-secondary btn-sm" disabled><i data-lucide="copy"></i> Copy Text</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="content-section">
+                <div class="section-title-wrap">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h2 class="section-title">Contact Information</h2>
+                    <p class="section-subtitle">Reach out for internships, project collaborations, or IT queries</p>
+                </div>
+
+                <div class="contact-layout grid grid-2">
+                    <div class="contact-info-panel glass">
+                        <h3>Connect with Me</h3>
+                        <p>Feel free to reach out via any of the channels below. I'm currently looking for internships and entry-level IT support or web development opportunities.</p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="icon-box"><i data-lucide="mail"></i></div>
+                                <div>
+                                    <span class="detail-label">Email</span>
+                                    <a href="mailto:dilshanudara512@gmail.com" class="detail-val">dilshanudara512@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="icon-box"><i data-lucide="phone"></i></div>
+                                <div>
+                                    <span class="detail-label">Phone</span>
+                                    <span class="detail-val">0779716882</span>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></div>
+                                <div>
+                                    <span class="detail-label">GitHub</span>
+                                    <a href="https://github.com/dyson-999" target="_blank" class="detail-val">dyson-999</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CV Download Button -->
+                        <div class="download-cv-wrap">
+                            <a href="DILSHAN UDARA CV.pdf" target="_blank" class="btn btn-primary btn-block">
+                                <i data-lucide="download"></i> Download Full PDF CV
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel glass">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="c-name">Name</label>
+                                <input type="text" id="c-name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="c-email">Email Address</label>
+                                <input type="email" id="c-email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="c-msg">Message</label>
+                                <textarea id="c-msg" placeholder="Write your message here..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Lecture Details Modal Overlay -->
+    <div class="modal-overlay" id="lecture-modal">
+        <div class="modal-content glass">
+            <button class="modal-close" id="modal-close"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <span class="modal-lecture-num" id="modal-lecture-code">L01</span>
+                <h3 id="modal-lecture-title">Lecture Title</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tabs">
+                    <button class="modal-tab active" data-modtab="concepts">Core Concepts</button>
+                    <button class="modal-tab" data-modtab="worksheets">Worksheets & Activities</button>
+                    <button class="modal-tab" data-modtab="reflections">My Reflections</button>
+                </div>
+                <div class="modal-tab-content">
+                    <div id="modtab-concepts" class="modal-pane active"></div>
+                    <div id="modtab-worksheets" class="modal-pane"></div>
+                    <div id="modtab-reflections" class="modal-pane"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox" id="gallery-lightbox">
+        <button class="lightbox-close" id="lightbox-close"><i data-lucide="x"></i></button>
+        <button class="lightbox-arrow prev" id="lightbox-prev"><i data-lucide="chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" id="lightbox-img" alt="Enlarged gallery photo">
+            <p id="lightbox-caption">Photo Caption</p>
+        </div>
+        <button class="lightbox-arrow next" id="lightbox-next"><i data-lucide="chevron-right"></i></button>
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
