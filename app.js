@@ -1,6 +1,3 @@
-// ==========================================================================
-// STANDALONE PROJECT COMPLETION REPORT VIEWER MODULE
-// ==========================================================================
 let reportCurrentPage = 1;
 const reportTotalPages = 14;
 
